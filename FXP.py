@@ -13,6 +13,6 @@ if rqe == 1:
         Balance-=tt
         print('Now your balance is ' +str(Balance))
     else:
-        print('There is nothing special')
+        print('There is nothing special and your balance '+str(Balance))
 else:
-    print('Have a good day and btw your balance is' +str(Balance))
+    print('Have a good day and btw your balance is ' +str(Balance))
