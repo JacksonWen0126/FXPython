@@ -1,8 +1,5 @@
 
 
-
-
-
 def load1():
     f=open('SecretFile.txt','r')
     f1 = f.read().split(',')
