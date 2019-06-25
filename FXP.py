@@ -1,15 +1,25 @@
 
-def update(Balance,num):
-    f=open('SecretFile.txt','r+')
-    text = f.read()
-    text = text.replace(Balance,num)
-    f.write(text)
+def update1(Balance,num):
+    f1=open('SecretFile.txt','r+')
+    text = f1.read()
+    B1=Balance
+    n1=num
+#cant replace the original and update in the file
+    text = text.replace(B1,n1)
+    print(text)
+    f1.write(str(text))
+    f1.close()
+    return
 
 def load1():
     f=open('SecretFile.txt','r')
+    print('before readn'+str(f))
     f1 = f.read().split(',')
     Balance=f1[1]
+    Balance = Balance.strip()
     #print(Balance)
+    #print(str(f1))
+    f.close()
     return Balance
     
 Balance=float(load1())
@@ -23,7 +33,7 @@ if rqe == 1:
         temp=Balance
         Balance +=num
         print(Balance)
-        update(str(temp),str(Balance))
+        update1(str(temp),str(Balance))
         print('Now balance is '+str(Balance))
     elif wyn ==2:
         exn=float(int(input('Exchange rate now is 1 Gold = 51.3RMB, enter the amount of Gold you want\n')))
